@@ -1,0 +1,162 @@
+/* İletişim Sayfası CSS */
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6fa;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+.navbar {
+  background: #4a69bd;
+  padding: 0.7rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.navbar-brand {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 1.1rem;
+  margin: 0;
+  padding: 0;
+}
+.navbar-nav li a {
+  color: #e3eafc;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.navbar-nav li a.active, .navbar-nav li a:hover {
+  background: #fff;
+  color: #4a69bd;
+}
+
+.header {
+  background: #e3eafc;
+  color: #222f3e;
+  text-align: center;
+  padding: 2.2rem 1rem 1.2rem 1rem;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.header h1 {
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+}
+.header p {
+  font-size: 1.1rem;
+  color: #3867d6;
+}
+
+.container {
+  max-width: 600px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.form-section {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+}
+
+.iletisim-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.form-group label {
+  font-weight: 500;
+  color: #3867d6;
+}
+.form-group input,
+.form-group textarea {
+  padding: 0.7rem;
+  border: 1px solid #b2bec3;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f8f9fa;
+  transition: border 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border: 1.5px solid #4a69bd;
+  outline: none;
+}
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+.form-buttons button {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: #4a69bd;
+  color: #fff;
+  transition: background 0.2s;
+}
+.form-buttons button#temizleBtn {
+  background: #b2bec3;
+  color: #222;
+}
+.form-buttons button:hover {
+  background: #3867d6;
+  color: #fff;
+}
+.form-hata {
+  color: #e84118;
+  font-size: 0.98rem;
+  margin-top: 0.5rem;
+  min-height: 1.2em;
+}
+
+.footer {
+  background: #222f3e;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  .navbar .container {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .container {
+    padding: 0 0.5rem;
+  }
+  .form-section {
+    padding: 1rem 0.3rem;
+  }
+} 
