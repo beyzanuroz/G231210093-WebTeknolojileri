@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>İletişim</title>
-    <link rel="stylesheet" href="css/iletisim.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/iletisim.css" />
+  </head>
+  <body>
     <!-- Sabit Navbar Başlangıcı -->
     <nav class="navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Ahmet Yılmaz</a>
+        <a class="navbar-brand" href="index.html">Beyzanur Öztürk</a>
         <ul class="navbar-nav">
           <li><a href="index.html">Hakkımda</a></li>
           <li><a href="ozgecmis.html">Özgeçmiş</a></li>
@@ -18,7 +18,6 @@
           <li><a href="mirasimiz.html">Mirasımız</a></li>
           <li><a href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
           <li><a class="active" href="iletisim.html">İletişim</a></li>
-          <li><a href="login.html">Giriş</a></li>
         </ul>
       </div>
     </nav>
@@ -26,49 +25,56 @@
 
     <!-- Header Başlangıcı -->
     <header class="header">
-        <h1>İletişim</h1>
-        <p>Benimle iletişime geçmek için aşağıdaki formu doldurabilirsiniz.</p>
+      <h1>İletişim</h1>
+      <p>Benimle iletişime geçmek için aşağıdaki formu doldurabilirsiniz.</p>
     </header>
     <!-- Header Bitişi -->
 
     <main class="container">
-        <section class="form-section">
-            <form id="iletisimForm" class="iletisim-form" autocomplete="off">
-                <div class="form-group">
-                    <label for="ad">Ad</label>
-                    <input type="text" id="ad" name="ad" required>
-                </div>
-                <div class="form-group">
-                    <label for="soyad">Soyad</label>
-                    <input type="text" id="soyad" name="soyad" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">E-posta</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefon">Telefon</label>
-                    <input type="tel" id="telefon" name="telefon" pattern="[0-9]{10,15}" required placeholder="5XXXXXXXXX">
-                </div>
-                <div class="form-group">
-                    <label for="mesaj">Mesaj</label>
-                    <textarea id="mesaj" name="mesaj" rows="4" required></textarea>
-                </div>
-                <div class="form-buttons">
-                    <button type="reset" id="temizleBtn">Temizle</button>
-                    <button type="submit" id="gonderBtn">Gönder</button>
-                </div>
-                <div id="formHata" class="form-hata"></div>
-            </form>
-        </section>
+      <section class="form-section">
+        <form id="iletisimForm" class="iletisim-form" autocomplete="off">
+          <div class="form-group">
+            <label for="ad">Ad</label>
+            <input type="text" id="ad" name="ad" required />
+          </div>
+          <div class="form-group">
+            <label for="soyad">Soyad</label>
+            <input type="text" id="soyad" name="soyad" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-posta</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="telefon">Telefon</label>
+            <input
+              type="tel"
+              id="telefon"
+              name="telefon"
+              pattern="[0-9]{10,15}"
+              required
+              placeholder="5XXXXXXXXX"
+            />
+          </div>
+          <div class="form-group">
+            <label for="mesaj">Mesaj</label>
+            <textarea id="mesaj" name="mesaj" rows="4" required></textarea>
+          </div>
+          <div class="form-buttons">
+            <button type="reset" id="temizleBtn">Temizle</button>
+            <button type="submit" id="gonderBtn">Gönder</button>
+          </div>
+          <div id="formHata" class="form-hata"></div>
+        </form>
+      </section>
     </main>
 
     <!-- Footer Başlangıcı -->
     <footer class="footer">
-      <small>&copy; 2024 Ahmet Yılmaz - Tüm Hakları Saklıdır.</small>
+      <small>&copy; 2025 Beyzanur Öztürk - Tüm Hakları Saklıdır.</small>
     </footer>
     <!-- Footer Bitişi -->
 
     <script src="js/iletisim.js"></script>
-</body>
-</html> 
+  </body>
+</html>
