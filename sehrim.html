@@ -6,6 +6,57 @@
     <title>Şehrim - Kastamonu</title>
     <!-- Harici stil dosyası -->
     <link rel="stylesheet" href="css/sehrim.css" />
+    <style>
+      .slider-section {
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 400%; /* 4 görsel */
+      }
+
+      .slides a {
+        flex: 1 0 100%;
+      }
+
+      .slides img {
+        width: 100%;
+        display: block;
+      }
+
+      .slider-caption {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+    </style>
   </head>
   <body>
     <!-- Sabit Navbar Başlangıcı -->
@@ -36,7 +87,7 @@
     <!-- Slider (Basit) Başlangıcı -->
     <section class="slider-section">
       <div class="slider">
-        <div class="slides">
+        <div class="slides" id="slideContainer">
           <a href="#ilgaz-info"
             ><img src="images/ilgaz.jpg" alt="Ilgaz Dağı"
           /></a>
@@ -50,6 +101,8 @@
             ><img src="images/taskopru.jpg" alt="Taşköprü"
           /></a>
         </div>
+        <button class="nav-btn prev" onclick="prevSlide()">&#10094;</button>
+        <button class="nav-btn next" onclick="nextSlide()">&#10095;</button>
       </div>
       <div class="slider-caption">
         Fotoğraflara tıklayarak ilgili bilgiye ulaşabilirsiniz.
@@ -114,5 +167,30 @@
       <small>&copy; 2025 Beyzanur Öztürk - Tüm Hakları Saklıdır.</small>
     </footer>
     <!-- Footer Bitişi -->
+    <script>
+      const slideContainer = document.getElementById("slideContainer");
+      const totalSlides = slideContainer.children.length;
+      let currentIndex = 0;
+
+      function showSlide(index) {
+        if (index >= totalSlides) index = 0;
+        if (index < 0) index = totalSlides - 1;
+        slideContainer.style.transform = "translateX(" + -index * 100 + "%)";
+        currentIndex = index;
+      }
+
+      function nextSlide() {
+        showSlide(currentIndex + 1);
+      }
+
+      function prevSlide() {
+        showSlide(currentIndex - 1);
+      }
+
+      // Otomatik geçiş (isteğe bağlı)
+      setInterval(() => {
+        nextSlide();
+      }, 5000); // 5 saniyede bir geçiş
+    </script>
   </body>
 </html>
