@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Sonucu</title>
+    <link rel="stylesheet" href="css/iletisim.css">
+</head>
+<body>
+    <!-- Sabit Navbar Başlangıcı -->
+    <nav class="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Ahmet Yılmaz</a>
+        <ul class="navbar-nav">
+          <li><a href="index.html">Hakkımda</a></li>
+          <li><a href="ozgecmis.html">Özgeçmiş</a></li>
+          <li><a href="sehrim.html">Şehrim</a></li>
+          <li><a href="mirasimiz.html">Mirasımız</a></li>
+          <li><a href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a href="login.html">Giriş</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Sabit Navbar Bitişi -->
+
+    <!-- Header Başlangıcı -->
+    <header class="header">
+        <h1>Form Sonucu</h1>
+        <p>Gönderdiğiniz bilgiler aşağıda listelenmiştir.</p>
+    </header>
+    <!-- Header Bitişi -->
+
+    <main class="container">
+        <section class="form-section">
+            <div class="sonuc-kutusu" id="sonucKutusu">
+                <!-- JS ile veriler buraya gelecek -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Başlangıcı -->
+    <footer class="footer">
+      <small>&copy; 2024 Ahmet Yılmaz - Tüm Hakları Saklıdır.</small>
+    </footer>
+    <!-- Footer Bitişi -->
+
+    <script>
+    // localStorage'dan verileri al ve göster
+    const sonucKutusu = document.getElementById('sonucKutusu');
+    const data = localStorage.getItem('iletisimFormData');
+    if (data) {
+      const { ad, soyad, email, telefon, mesaj } = JSON.parse(data);
+      sonucKutusu.innerHTML = `
+        <div class="form-sonuc">
+          <p><strong>Ad:</strong> ${ad}</p>
+          <p><strong>Soyad:</strong> ${soyad}</p>
+          <p><strong>E-posta:</strong> ${email}</p>
+          <p><strong>Telefon:</strong> ${telefon}</p>
+          <p><strong>Mesaj:</strong> ${mesaj}</p>
+        </div>
+        <a href="iletisim.html" class="btn-geri">Yeni Mesaj Gönder</a>
+      `;
+      localStorage.removeItem('iletisimFormData');
+    } else {
+      sonucKutusu.innerHTML = '<div style="color:red;">Form verisi bulunamadı.</div>';
+    }
+    </script>
+    <style>
+    .sonuc-kutusu {
+      background: #e3eafc;
+      border-radius: 12px;
+      padding: 1.5rem 1rem;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      margin-top: 1.5rem;
+      text-align: left;
+    }
+    .form-sonuc p { margin: 0.5rem 0; }
+    .btn-geri {
+      display: inline-block;
+      margin-top: 1.2rem;
+      background: #4a69bd;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .btn-geri:hover { background: #3867d6; }
+    </style>
+</body>
+</html> 
